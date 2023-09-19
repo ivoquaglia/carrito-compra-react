@@ -4,7 +4,6 @@ import { ProductosContext } from "./ProductosContext"
 
 export const ProductosProvider = ({children}) => {
 
-    
     const [productos, setProducto] = useState([])
 
     const fetchProductos = async () => {
@@ -18,10 +17,9 @@ export const ProductosProvider = ({children}) => {
 
     }, [])
 
-
     return (
-        <ProductosContext.ProductosProvider value={{productos}}>
+        <ProductosContext.Provider value={{productos}}>
             {children}
-        </ProductosContext.ProductosProvider>
+        </ProductosContext.Provider>
     )
 }
