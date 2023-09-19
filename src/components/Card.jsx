@@ -1,14 +1,16 @@
 import { useState } from "react"
 
-export const Card = ({ imagen, titulo, descripcion, precio, id }) => {
+export const Card = ({ imagen, titulo, descripcion, precio, id, handleAgregar, handleQuitar, handleAumentar, handleDisminuir}) => {
 
     const [adeded, setAdeded] = useState(false)
 
     const clickAgregar = () => {
+        handleAgregar()
         setAdeded(true)
     }
 
     const clickQuitar = () => {
+        handleQuitar()
         setAdeded(false)
     }
 
